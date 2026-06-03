@@ -11,16 +11,56 @@ interface CategoryCardProps {
 }
 
 const colorClasses = {
-  emerald: 'bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-300',
-  blue: 'bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300',
-  amber: 'bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-300',
-  rose: 'bg-rose-100 dark:bg-rose-900/30 text-rose-700 dark:text-rose-300',
-  purple: 'bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300',
-  cyan: 'bg-cyan-100 dark:bg-cyan-900/30 text-cyan-700 dark:text-cyan-300',
-  lime: 'bg-lime-100 dark:bg-lime-900/30 text-lime-700 dark:text-lime-300',
-  pink: 'bg-pink-100 dark:bg-pink-900/30 text-pink-700 dark:text-pink-300',
-  indigo: 'bg-indigo-100 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300',
-  orange: 'bg-orange-100 dark:bg-orange-900/30 text-orange-700 dark:text-orange-300',
+  emerald: {
+    bg: 'bg-emerald-50 dark:bg-emerald-900/20',
+    text: 'text-emerald-600 dark:text-emerald-400',
+    border: 'border-emerald-100 dark:border-emerald-800',
+  },
+  blue: {
+    bg: 'bg-blue-50 dark:bg-blue-900/20',
+    text: 'text-blue-600 dark:text-blue-400',
+    border: 'border-blue-100 dark:border-blue-800',
+  },
+  amber: {
+    bg: 'bg-amber-50 dark:bg-amber-900/20',
+    text: 'text-amber-600 dark:text-amber-400',
+    border: 'border-amber-100 dark:border-amber-800',
+  },
+  rose: {
+    bg: 'bg-rose-50 dark:bg-rose-900/20',
+    text: 'text-rose-600 dark:text-rose-400',
+    border: 'border-rose-100 dark:border-rose-800',
+  },
+  purple: {
+    bg: 'bg-purple-50 dark:bg-purple-900/20',
+    text: 'text-purple-600 dark:text-purple-400',
+    border: 'border-purple-100 dark:border-purple-800',
+  },
+  cyan: {
+    bg: 'bg-cyan-50 dark:bg-cyan-900/20',
+    text: 'text-cyan-600 dark:text-cyan-400',
+    border: 'border-cyan-100 dark:border-cyan-800',
+  },
+  lime: {
+    bg: 'bg-lime-50 dark:bg-lime-900/20',
+    text: 'text-lime-600 dark:text-lime-400',
+    border: 'border-lime-100 dark:border-lime-800',
+  },
+  pink: {
+    bg: 'bg-pink-50 dark:bg-pink-900/20',
+    text: 'text-pink-600 dark:text-pink-400',
+    border: 'border-pink-100 dark:border-pink-800',
+  },
+  indigo: {
+    bg: 'bg-indigo-50 dark:bg-indigo-900/20',
+    text: 'text-indigo-600 dark:text-indigo-400',
+    border: 'border-indigo-100 dark:border-indigo-800',
+  },
+  orange: {
+    bg: 'bg-orange-50 dark:bg-orange-900/20',
+    text: 'text-orange-600 dark:text-orange-400',
+    border: 'border-orange-100 dark:border-orange-800',
+  },
 };
 
 export default function CategoryCard({
@@ -30,21 +70,23 @@ export default function CategoryCard({
   description,
   color,
 }: CategoryCardProps) {
+  const colors = colorClasses[color];
+  
   return (
-    <div className="card-interactive group overflow-hidden p-6">
+    <div className="card-interactive group relative overflow-hidden p-6">
       {/* Background Gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-transparent to-transparent group-hover:from-emerald-50 group-hover:to-transparent dark:group-hover:from-emerald-950/10 transition-all duration-300 -z-10" />
+      <div className={`absolute inset-0 ${colors.bg} opacity-0 group-hover:opacity-100 transition-all duration-300`} />
 
       {/* Icon Container */}
-      <div className={`w-12 h-12 rounded-xl ${colorClasses[color]} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
-        <div className="w-6 h-6">
+      <div className={`w-14 h-14 rounded-2xl ${colors.bg} ${colors.text} flex items-center justify-center mb-4 group-hover:scale-110 transition-all duration-300 group-hover:shadow-lg`}>
+        <div className="w-7 h-7">
           {icon}
         </div>
       </div>
 
       {/* Content */}
-      <div className="space-y-3">
-        <h3 className="font-bold text-lg text-neutral-950 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">
+      <div className="space-y-3 relative z-10">
+        <h3 className="font-bold text-xl text-neutral-950 dark:text-white group-hover:text-neutral-900 dark:group-hover:text-white transition-colors">
           {title}
         </h3>
 
@@ -54,17 +96,17 @@ export default function CategoryCard({
 
         {/* Resource Count Badge */}
         <div className="flex items-center justify-between pt-2">
-          <span className="badge badge-primary text-xs">
+          <span className={`px-3 py-1 rounded-full text-xs font-medium ${colors.bg} ${colors.text}`}>
             {resourceCount} resources
           </span>
-          <span className="text-xs font-medium text-neutral-400 dark:text-neutral-500 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">
+          <span className={`text-lg font-medium ${colors.text} opacity-0 group-hover:opacity-100 transform translate-x-0 group-hover:translate-x-1 transition-all duration-300`}>
             →
           </span>
         </div>
       </div>
 
       {/* Hover Accent Line */}
-      <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-emerald-500 to-emerald-400 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
+      <div className={`absolute bottom-0 left-0 right-0 h-1 ${colors.text.replace('text-', 'bg-')} scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left`} />
     </div>
   );
 }
