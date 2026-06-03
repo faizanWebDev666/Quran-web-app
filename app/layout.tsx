@@ -14,14 +14,9 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Islamic Companion Hub - Quran, Hadith & Islamic Resources",
-  description: "Your premium Islamic resource hub with Quran, Hadith, prayer times, and daily Islamic reminders. Modern, mobile-first design for the best user experience.",
+  description: "Your premium Islamic resource hub with Quran, Hadith, prayer times, and daily Islamic reminders. Beautiful, modern platform for seekers of all ages.",
   keywords: ["Quran", "Hadith", "Islamic Resources", "Prayer Times", "Qibla Direction", "Islamic Apps"],
   authors: [{ name: "Islamic Companion Hub" }],
-  viewport: {
-    width: "device-width",
-    initialScale: 1,
-    maximumScale: 5,
-  },
   robots: "index, follow",
   openGraph: {
     type: "website",
@@ -29,6 +24,13 @@ export const metadata: Metadata = {
     title: "Islamic Companion Hub - Premium Islamic Resources",
     description: "Discover Quran, Hadith, prayer times, and Islamic knowledge in one beautiful platform.",
   },
+};
+
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+  themeColor: "#10b981",
 };
 
 export default function RootLayout({

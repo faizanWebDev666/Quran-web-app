@@ -40,7 +40,7 @@ export default function ResourceCard({
           </div>
         )}
         {isNew && (
-          <div className="absolute top-4 left-4">
+          <div className="absolute top-4 left-1/2 -translate-x-1/2">
             <span className="bg-gradient-to-r from-emerald-500 to-emerald-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg">
               NEW
             </span>
@@ -57,9 +57,9 @@ export default function ResourceCard({
       </div>
 
       {/* Content Section */}
-      <div className="p-4 md:p-5 flex-1 flex flex-col">
+      <div className="p-4 md:p-5 flex-1 flex flex-col text-center">
         {/* Category Badge */}
-        <div className="mb-3">
+        <div className="mb-3 flex justify-center">
           <span className="bg-emerald-50 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-300 text-xs font-medium px-2.5 py-1 rounded-full">
             {category}
           </span>
@@ -77,7 +77,7 @@ export default function ResourceCard({
 
         {/* Metadata */}
         {(author || views) && (
-          <div className="flex items-center justify-between text-xs text-neutral-500 dark:text-neutral-400 mb-4 pb-4 border-t border-neutral-100 dark:border-neutral-800 pt-4">
+          <div className="flex items-center justify-center gap-4 text-xs text-neutral-500 dark:text-neutral-400 mb-4 pb-4 border-t border-neutral-100 dark:border-neutral-800 pt-4">
             {author && <span className="font-medium">by {author}</span>}
             {views && <span>{views.toLocaleString()} views</span>}
           </div>

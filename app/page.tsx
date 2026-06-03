@@ -178,8 +178,8 @@ export default function Home() {
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
             {/* Left Content */}
-            <div className="space-y-8 animate-slideInLeft">
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-emerald-50 dark:bg-emerald-900/30 border border-emerald-200 dark:border-emerald-800 rounded-full">
+            <div className="space-y-8 animate-slideInLeft text-center lg:text-left">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-emerald-50 dark:bg-emerald-900/30 border border-emerald-200 dark:border-emerald-800 rounded-full mx-auto lg:mx-0">
                 <Sparkles className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
                 <span className="text-sm font-medium text-emerald-700 dark:text-emerald-300">✨ Your Islamic Journey Starts Here</span>
               </div>
@@ -195,7 +195,7 @@ export default function Home() {
                 </p>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                 <button className="btn btn-primary text-lg px-8 py-4 shadow-xl shadow-emerald-200 dark:shadow-emerald-900/30">
                   Explore Now
                   <ChevronRight className="w-5 h-5" />
@@ -282,7 +282,7 @@ export default function Home() {
 
         {/* Daily Reminder Section */}
         <section className="section container-max">
-          <div className="mb-8">
+          <div className="mb-8 text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-neutral-950 dark:text-white mb-2">
               Daily Reminder
             </h2>
@@ -295,7 +295,7 @@ export default function Home() {
 
         {/* Featured Categories Section */}
         <section className="section container-max">
-          <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-12">
+          <div className="flex flex-col md:flex-row md:items-center md:justify-center mb-12 gap-4 text-center">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold text-neutral-950 dark:text-white mb-2">
                 Featured Categories
@@ -326,7 +326,7 @@ export default function Home() {
 
         {/* Featured Resources Section */}
         <section className="section container-max">
-          <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-12">
+          <div className="flex flex-col md:flex-row md:items-center md:justify-center mb-12 gap-4 text-center">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold text-neutral-950 dark:text-white mb-2">
                 Featured Resources

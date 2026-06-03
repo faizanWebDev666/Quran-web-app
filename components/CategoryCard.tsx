@@ -78,14 +78,14 @@ export default function CategoryCard({
       <div className={`absolute inset-0 ${colors.bg} opacity-0 group-hover:opacity-100 transition-all duration-300`} />
 
       {/* Icon Container */}
-      <div className={`w-14 h-14 rounded-2xl ${colors.bg} ${colors.text} flex items-center justify-center mb-4 group-hover:scale-110 transition-all duration-300 group-hover:shadow-lg`}>
+      <div className={`w-14 h-14 rounded-2xl ${colors.bg} ${colors.text} flex items-center justify-center mb-4 group-hover:scale-110 transition-all duration-300 group-hover:shadow-lg mx-auto`}>
         <div className="w-7 h-7">
           {icon}
         </div>
       </div>
 
       {/* Content */}
-      <div className="space-y-3 relative z-10">
+      <div className="space-y-3 relative z-10 text-center">
         <h3 className="font-bold text-xl text-neutral-950 dark:text-white group-hover:text-neutral-900 dark:group-hover:text-white transition-colors">
           {title}
         </h3>
@@ -95,7 +95,7 @@ export default function CategoryCard({
         </p>
 
         {/* Resource Count Badge */}
-        <div className="flex items-center justify-between pt-2">
+        <div className="flex items-center justify-center pt-2 gap-3">
           <span className={`px-3 py-1 rounded-full text-xs font-medium ${colors.bg} ${colors.text}`}>
             {resourceCount} resources
           </span>
