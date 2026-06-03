@@ -8,6 +8,7 @@ interface CategoryCardProps {
   resourceCount: number;
   description: string;
   color: 'emerald' | 'blue' | 'amber' | 'rose' | 'purple' | 'cyan' | 'lime' | 'pink' | 'indigo' | 'orange';
+  link?: string;
 }
 
 const colorClasses = {
@@ -69,11 +70,12 @@ export default function CategoryCard({
   resourceCount,
   description,
   color,
+  link,
 }: CategoryCardProps) {
   const colors = colorClasses[color];
   
-  return (
-    <div className="card-interactive group relative overflow-hidden p-6">
+  const CardContent = () => (
+    <>
       {/* Background Gradient */}
       <div className={`absolute inset-0 ${colors.bg} opacity-0 group-hover:opacity-100 transition-all duration-300`} />
 
@@ -82,7 +84,7 @@ export default function CategoryCard({
         <div className="w-7 h-7">
           {icon}
         </div>
-      </div>
+      </div> 
 
       {/* Content */}
       <div className="space-y-3 relative z-10 text-center">
@@ -107,6 +109,25 @@ export default function CategoryCard({
 
       {/* Hover Accent Line */}
       <div className={`absolute bottom-0 left-0 right-0 h-1 ${colors.text.replace('text-', 'bg-')} scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left`} />
+    </>
+  );
+  
+  if (link) {
+    return (
+      <a 
+        href={link} 
+        target="_blank" 
+        rel="noopener noreferrer"
+        className="block card-interactive group relative overflow-hidden p-6"
+      >
+        <CardContent />
+      </a>
+    );
+  }
+  
+  return (
+    <div className="card-interactive group relative overflow-hidden p-6">
+      <CardContent />
     </div>
   );
 }

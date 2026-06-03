@@ -32,6 +32,7 @@ const categories = [
     resourceCount: 114,
     description: 'Complete Quran with translations, tafsirs, and recitations',
     color: 'emerald' as const,
+    link: 'https://quran.com',
   },
   {
     icon: <Scroll className="w-6 h-6" />,
@@ -39,6 +40,7 @@ const categories = [
     resourceCount: 42,
     description: 'Authentic Hadith collections and Islamic traditions',
     color: 'blue' as const,
+    link: 'https://sunnah.com',
   },
   {
     icon: <Hand className="w-6 h-6" />,
@@ -46,6 +48,7 @@ const categories = [
     resourceCount: 320,
     description: 'Daily supplications and remembrance of Allah',
     color: 'amber' as const,
+    link: 'https://islamtools.org/daily-duas',
   },
   {
     icon: <Clock className="w-6 h-6" />,
@@ -53,6 +56,7 @@ const categories = [
     resourceCount: 200,
     description: 'Accurate prayer times for your location',
     color: 'rose' as const,
+    link: 'https://www.islamicfinder.org/prayer-times',
   },
   {
     icon: <Compass className="w-6 h-6" />,
@@ -60,6 +64,7 @@ const categories = [
     resourceCount: 1,
     description: 'Find the direction to Makkah from anywhere',
     color: 'purple' as const,
+    link: 'https://islamtools.org/qibla-direction',
   },
   {
     icon: <BookMarked className="w-6 h-6" />,
@@ -67,6 +72,7 @@ const categories = [
     resourceCount: 85,
     description: 'Curated Islamic literature and scholarly works',
     color: 'cyan' as const,
+    link: 'https://kalamullah.com',
   },
   {
     icon: <Headphones className="w-6 h-6" />,
@@ -74,6 +80,7 @@ const categories = [
     resourceCount: 156,
     description: 'Educational talks from renowned scholars',
     color: 'lime' as const,
+    link: 'https://muslimcentral.com',
   },
   {
     icon: <Baby className="w-6 h-6" />,
@@ -81,6 +88,7 @@ const categories = [
     resourceCount: 64,
     description: 'Islamic education for children and families',
     color: 'pink' as const,
+    link: 'https://islamtools.org/story-time',
   },
   {
     icon: <Droplet className="w-6 h-6" />,
@@ -88,6 +96,7 @@ const categories = [
     resourceCount: 98,
     description: 'Ramadan guides, duas, and special content',
     color: 'indigo' as const,
+    link: 'https://www.islamicfinder.org/ramadan',
   },
   {
     icon: <Smartphone className="w-6 h-6" />,
@@ -95,6 +104,7 @@ const categories = [
     resourceCount: 45,
     description: 'Curated list of best Islamic mobile apps',
     color: 'orange' as const,
+    link: 'https://www.muslimpro.com',
   },
 ];
 
