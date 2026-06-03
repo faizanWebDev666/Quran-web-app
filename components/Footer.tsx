@@ -1,13 +1,10 @@
 'use client';
 
 import {
-  Facebook,
-  Twitter,
-  Instagram,
-  Linkedin,
   Mail,
   MapPin,
   Phone,
+  ChevronUp,
 } from 'lucide-react';
 
 export default function Footer() {
@@ -42,28 +39,28 @@ export default function Footer() {
                 className="w-10 h-10 rounded-lg bg-neutral-200 dark:bg-neutral-800 flex items-center justify-center hover:bg-emerald-500 hover:text-white transition-colors"
                 aria-label="Facebook"
               >
-                <Facebook className="w-5 h-5" />
+                <span className="text-sm font-bold">f</span>
               </a>
               <a
                 href="#"
                 className="w-10 h-10 rounded-lg bg-neutral-200 dark:bg-neutral-800 flex items-center justify-center hover:bg-emerald-500 hover:text-white transition-colors"
-                aria-label="Twitter"
+                aria-label="X"
               >
-                <Twitter className="w-5 h-5" />
+                <span className="text-sm font-bold">X</span>
               </a>
               <a
                 href="#"
                 className="w-10 h-10 rounded-lg bg-neutral-200 dark:bg-neutral-800 flex items-center justify-center hover:bg-emerald-500 hover:text-white transition-colors"
                 aria-label="Instagram"
               >
-                <Instagram className="w-5 h-5" />
+                <span className="text-sm font-bold">in</span>
               </a>
               <a
                 href="#"
                 className="w-10 h-10 rounded-lg bg-neutral-200 dark:bg-neutral-800 flex items-center justify-center hover:bg-emerald-500 hover:text-white transition-colors"
                 aria-label="LinkedIn"
               >
-                <Linkedin className="w-5 h-5" />
+                <span className="text-sm font-bold">in</span>
               </a>
             </div>
           </div>
@@ -192,19 +189,7 @@ export default function Footer() {
         className="fixed bottom-24 md:bottom-8 right-4 md:right-8 btn-icon btn-icon-primary shadow-soft-lg hover:shadow-soft-lg animate-slideUp"
         aria-label="Scroll to top"
       >
-        <svg
-          className="w-5 h-5"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M5 10l7-7m0 0l7 7m-7-7v18"
-          />
-        </svg>
+        <ChevronUp className="w-5 h-5" />
       </button>
     </footer>
   );
